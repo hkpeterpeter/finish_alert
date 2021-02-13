@@ -1,7 +1,7 @@
 # finish_alert
 
 Programs may run for a long time. 
-It is useful to play an alert sound when the program finished. 
+It is useful to say something when the program finished. 
 
 Here are some useful gists:
 
