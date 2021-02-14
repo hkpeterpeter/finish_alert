@@ -1,9 +1,6 @@
 # finish_alert
 
-Programs may run for a long time. 
-It is useful to say something when the program finished. 
-
-Here are some useful gists:
+Programs may run for a long time. It is useful to say something when the program is finished. 
 
 ## macOS
 
@@ -32,7 +29,7 @@ say(m="finir",v="Amelie")          # French
 
 ## Other Languages
 
-Codes with default values for different human languages can be founded in [src/py](src/py)
+`say` function with different default values for the supporting human languages can be founded in [src/py](src/py)
 
 ### Chinese
 ```python
