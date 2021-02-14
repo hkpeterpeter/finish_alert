@@ -1,0 +1,16 @@
+{
+  "name": "say.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "say.js",
+  "scripts": {
+    "start": "node say.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "util": "^0.12.3"
+  }
+}
