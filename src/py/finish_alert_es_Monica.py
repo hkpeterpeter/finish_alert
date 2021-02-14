@@ -1,6 +1,6 @@
 import os
-def say(msg = "fin", voice = "Monica"):
-    os.system(f'say -v {voice} {msg}')
+def say(m = "fin", v = "Monica"):
+    os.system(f'say -v {v} {m}')
 
 if __name__ == "__main__":
     say()

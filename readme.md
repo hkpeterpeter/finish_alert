@@ -14,8 +14,8 @@ Here are some useful gists:
 ```python
 # List of voices: say -v ?
 import os
-def say(msg = "Finish", voice = "Victoria"):
-    os.system(f'say -v {voice} {msg}')
+def say(m = "Finish", v = "Victoria"):
+    os.system(f'say -v {v} {m}')
 ```
 
 Usage:
@@ -38,36 +38,36 @@ Code examples for other human languages can be founded in [src/py](src/py)
 ### Chinese
 ```python
 import os
-def say(msg = "完結", voice = "Ting-Ting"):
-    os.system(f'say -v {voice} {msg}')
+def say(m = "完結", v = "Ting-Ting"):
+    os.system(f'say -v {v} {m}')
 ```
 
 ### Cantonese
 
 ```python
 import os
-def say(msg = "完結", voice = "Sin-ji"):
-    os.system(f'say -v {voice} {msg}')
+def say(m = "完結", v = "Sin-ji"):
+    os.system(f'say -v {v} {m}')
 ```
 
 ### Spanish
 ```python
 import os
-def say(msg = "fin", voice = "Juan"):
-    os.system(f'say -v {voice} {msg}')
+def say(m = "fin", v = "Juan"):
+    os.system(f'say -v {v} {m}')
 ```
 
 ### Japanese
 ```python
 import os
-def say(msg = "終わり", voice = "Kyoko"):
-    os.system(f'say -v {voice} {msg}')
+def say(m = "終わり", v = "Kyoko"):
+    os.system(f'say -v {v} {m}')
 ```
 
 ### Korean
 ```python
 import os
-def say(msg = "종료", voice = "Yuna"):
-    os.system(f'say -v {voice} {msg}')
+def say(m = "종료", v = "Yuna"):
+    os.system(f'say -v {v} {m}')
 ```
    
