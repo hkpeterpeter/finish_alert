@@ -18,22 +18,21 @@ def say(m = "Finish", v = "Victoria"):
     os.system(f'say -v {v} {m}')
 ```
 
-Usage:
+Usage: 
 
 ```python
-# Run your program/experiment...
-say() # say finish at the end
-
-# Or say something more exciting
-say("Great! Finally finished, please check the result!") 
-
-# Or switch to another voice
-say("Great!", "Alex")
+say()                              # English
+say(m="完了吧，如無意外",v="Sin-ji")  # Cantonese
+say(m="完結",v="Ting-Ting")         # Chinese
+say(m="終わり",v="Kyoko")           # Japanese
+say(m="종료",v="Yuna")              # Korean
+say(m="fin",v="Monica")            # Spanish
+say(m="finir",v="Amelie")          # French
 ```
 
 ## Other Languages
 
-Code examples for other human languages can be founded in [src/py](src/py)
+Codes with default values for different human languages can be founded in [src/py](src/py)
 
 ### Chinese
 ```python
