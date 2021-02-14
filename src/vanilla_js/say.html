@@ -14,19 +14,13 @@
   
 
     <script src="say.js"></script>
-    <button onclick='say("Finish","Victoria");'>say("Finish", "Victoria"); // English </button> 
-    <br><br>
-    <button onclick='say("完了吧，如沒意外","Sin-ji");' >say("完了吧，如沒意外","Sin-ji"); // Cantonese</button>
-    <br><br>
-    <button onclick='say("完結","Ting-Ting");'>say(m="完結",v="Ting-Ting"); // Chinese</button>
-    <br><br>
-    <button onclick='say(m="終わり",v="Kyoko");'>say(m="終わり",v="Kyoko"); // Japanese </button>
-    <br><br>
-    <button onclick='say(m="종료",v="Yuna");'>say(m="종료",v="Yuna"); // Korean</button>
-    <br><br>
-    <button onclick='say(m="fin",v="Monica");'>say(m="fin",v="Monica"); // Spanish </button>
-    <br><br>
-    <button onclick='say(m="finir",v="Amelie");'>say(m="finir",v="Amelie"); // French</button>
+    <button onclick="say('Finish','Victoria');">English</button> 
+    <button onclick="say('完了吧，如沒意外','Sin-ji');" >Cantonese</button>
+    <button onclick="say('完結','Ting-Ting');">Chinese</button>
+    <button onclick="say('終わり','Kyoko');">Japanese</button>
+    <button onclick="say('종료','Yuna');">Korean</button>
+    <button onclick="say('fin','Monica');">Spanish</button>
+    <button onclick="say('finir','Amelie');">French</button>
 
     <ul>
         <li>Note: speechSynthesis.speak() without user activation is no longer allowed since M71, around December 2018.</li>

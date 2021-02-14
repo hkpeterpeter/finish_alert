@@ -173,15 +173,14 @@ function say(m = "Finish", v = "Victoria") {
 
 Usage in Vanilla JS
 ```js
- <script src="say.js"></script>
-    <button onclick='say("Finish","Victoria");'>English</button> 
-    <button onclick='say("完了吧，如沒意外","Sin-ji");' >Cantonese</button>
-    <button onclick='say("完結","Ting-Ting");'>Chinese</button>
-    <button onclick='say(m="終わり",v="Kyoko");'>Japanese</button>
-    <button onclick='say(m="종료",v="Yuna");'>Korean</button>
-    <button onclick='say(m="fin",v="Monica");'>Spanish</button>
-    <button onclick='say(m="finir",v="Amelie");'>French</button>
-</script>
+<script src="say.js"></script>
+<button onclick="say('Finish','Victoria');">English</button> 
+<button onclick="say('完了吧，如沒意外','Sin-ji');" >Cantonese</button>
+<button onclick="say('完結','Ting-Ting');">Chinese</button>
+<button onclick="say('終わり','Kyoko');">Japanese</button>
+<button onclick="say('종료','Yuna');">Korean</button>
+<button onclick="say('fin','Monica');">Spanish</button>
+<button onclick="say('finir','Amelie');">French</button>
 ```
 
 
