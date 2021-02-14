@@ -129,6 +129,66 @@ Say.say("fin", "Monica");           // Spanish
 Say.say("finir", "Amelie");         // French  
 ```
 
+### Vanilla JS 
+
+- Using the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_synthesis)
+- Note: speechSynthesis.speak() without user activation is no longer allowed since M71, around December 2018.
+- See [https://www.chromestatus.com/feature/5687444770914304](https://www.chromestatus.com/feature/5687444770914304) for more details
+
+- Implementation: [src/vanilla_js](src/vanilla_js)
+
+```js
+// say.js
+function setSpeech() {
+    return new Promise(
+        function (resolve, reject) {
+            let synth = window.speechSynthesis;
+            let id;
+            id = setInterval(() => {
+                if (synth.getVoices().length !== 0) {
+                    resolve(synth.getVoices());
+                    clearInterval(id);
+                }
+            }, 10);
+        }
+    )
+}
+function say(m = "Finish", v = "Victoria") {
+   let synth = window.speechSynthesis;
+   let s = setSpeech();
+   s.then((voices) => {
+        let utterThis = new SpeechSynthesisUtterance(m);
+        for(i = 0; i < voices.length ; i++) {
+            if(voices[i].name === v) {
+                utterThis.voice = voices[i];
+                break;
+            }   
+        } 
+        synth.speak(utterThis);
+   });  
+}
+```
+
+Usage in Vanilla JS
+```js
+ <script src="say.js"></script>
+    <button onclick='say("Finish","Victoria");'>say("Finish", "Victoria"); // English </button> 
+    <br><br>
+    <button onclick='say("完了吧，如沒意外","Sin-ji");' >say("完了吧，如沒意外","Sin-ji"); // Cantonese</button>
+    <br><br>
+    <button onclick='say("完結","Ting-Ting");'>say(m="完結",v="Ting-Ting"); // Chinese</button>
+    <br><br>
+    <button onclick='say(m="終わり",v="Kyoko");'>say(m="終わり",v="Kyoko"); // Japanese </button>
+    <br><br>
+    <button onclick='say(m="종료",v="Yuna");'>say(m="종료",v="Yuna"); // Korean</button>
+    <br><br>
+    <button onclick='say(m="fin",v="Monica");'>say(m="fin",v="Monica"); // Spanish </button>
+    <br><br>
+    <button onclick='say(m="finir",v="Amelie");'>say(m="finir",v="Amelie"); // French</button>
+</script>
+```
+
+
 ## Default languages in Python
 
 `say` function with different default values for the supporting human languages can be founded in [src/py](src/py)
