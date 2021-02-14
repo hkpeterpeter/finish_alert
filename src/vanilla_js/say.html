@@ -6,13 +6,8 @@
     <meta name="viewport" content="width=device-width">
     <title>Say / Vanilla JS</title>
   </head>
-
   <body>
     <h1>Say / Vanilla JS - Using Web Speech API</h1>
-    
-
-  
-
     <script src="say.js"></script>
     <button onclick="say('Finish','Victoria');">English</button> 
     <button onclick="say('完了吧，如沒意外','Sin-ji');" >Cantonese</button>
@@ -21,9 +16,8 @@
     <button onclick="say('종료','Yuna');">Korean</button>
     <button onclick="say('fin','Monica');">Spanish</button>
     <button onclick="say('finir','Amelie');">French</button>
-
     <ul>
-        <li>Note: speechSynthesis.speak() without user activation is no longer allowed since M71, around December 2018.</li>
+        <li>Note: <code>speechSynthesis.speak()</code> without user activation is no longer allowed since M71, around December 2018.</li>
         <li>See <a href="https://www.chromestatus.com/feature/5687444770914304">https://www.chromestatus.com/feature/5687444770914304</a> for more details</li>
         <pre>
 
