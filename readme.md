@@ -9,7 +9,6 @@ Programs may run for a long time. It is useful to say something when the program
 ### Python 
 
 ```python
-# List of voices: say -v ?
 import os
 def say(m = "Finish", v = "Victoria"):
     os.system(f'say -v {v} {m}')
@@ -44,7 +43,7 @@ func say(m string, v string) {
 ```
 
 Usage: 
-```gov
+```go
 say("", "")                    // English
 say("完了吧，如無意外", "Sin-ji") // Cantonese
 say("完結", "Ting-Ting")        // Chinese
