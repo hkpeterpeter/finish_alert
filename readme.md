@@ -95,13 +95,13 @@ Usage in C/C++:
 ```c++
 int main() {
     // UTF-8 needs to convert to bytes
-    say("Finish","Victoria");  // English
-    say("\xe5\xae\x8c\xe7\xb5\x90", "Sin-ji"); // Cantonese
-    say("\xe5\xae\x8c\xe7\xb5\x90", "Ting-Ting"); // Chinese
-    say("\xe7\xb5\x82\xe3\x82\x8f\xe3\x82\x8a", "Kyoko"); // Japanese
-    say("\xec\xa2\x85\xeb\xa3\x8c","Yuna"); // Korean
-    say("fin","Monica"); // Spanish
-    say("finir","Amelie"); // French
+    say("Finish","Victoria");                              // English
+    say("\xe5\xae\x8c\xe7\xb5\x90", "Sin-ji");             // Cantonese
+    say("\xe5\xae\x8c\xe7\xb5\x90", "Ting-Ting");          // Chinese
+    say("\xe7\xb5\x82\xe3\x82\x8f\xe3\x82\x8a", "Kyoko");  // Japanese
+    say("\xec\xa2\x85\xeb\xa3\x8c","Yuna");                // Korean
+    say("fin","Monica");                                   // Spanish
+    say("finir","Amelie");                                 // French
     return 0;
 }
 ```
