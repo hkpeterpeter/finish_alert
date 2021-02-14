@@ -32,19 +32,13 @@ say(m="finir",v="Amelie")          # French
 import "os/exec"
 
 func say(m string, v string) {
-	if m == "" {
-		m = "Finish"
-	}
-	if v == "" {
-		v = "Victoria"
-	}
 	exec.Command("say", "-v", v, m).Run()
 }
 ```
 
 Usage in Go: 
 ```go
-say("", "")                    // English
+say("Finish", "Victoria")       // English
 say("完了吧，如無意外", "Sin-ji") // Cantonese
 say("完結", "Ting-Ting")        // Chinese
 say("終わり", "Kyoko")          // Japanese
