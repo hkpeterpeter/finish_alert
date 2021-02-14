@@ -1,6 +1,8 @@
 # finish_alert
 
-Programs may run for a long time. It is useful to say something when the program is finished. 
+Programs may run for a long time. It is useful to say something when the program is finished in macOS.
+
+[Python](#Python) [Go](#Go) [NodeJS](#NodeJS) [C/C++](#C/C++) [Java](#Java) [VanillaJS](#VanillaJS)
 
 ## macOS
 
@@ -129,7 +131,7 @@ Say.say("fin", "Monica");           // Spanish
 Say.say("finir", "Amelie");         // French  
 ```
 
-### Vanilla JS 
+### VanillaJS 
 
 - Using the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_synthesis)
 - Note: speechSynthesis.speak() without user activation is no longer allowed since M71, around December 2018.
@@ -172,19 +174,13 @@ function say(m = "Finish", v = "Victoria") {
 Usage in Vanilla JS
 ```js
  <script src="say.js"></script>
-    <button onclick='say("Finish","Victoria");'>say("Finish", "Victoria"); // English </button> 
-    <br><br>
-    <button onclick='say("完了吧，如沒意外","Sin-ji");' >say("完了吧，如沒意外","Sin-ji"); // Cantonese</button>
-    <br><br>
-    <button onclick='say("完結","Ting-Ting");'>say(m="完結",v="Ting-Ting"); // Chinese</button>
-    <br><br>
-    <button onclick='say(m="終わり",v="Kyoko");'>say(m="終わり",v="Kyoko"); // Japanese </button>
-    <br><br>
-    <button onclick='say(m="종료",v="Yuna");'>say(m="종료",v="Yuna"); // Korean</button>
-    <br><br>
-    <button onclick='say(m="fin",v="Monica");'>say(m="fin",v="Monica"); // Spanish </button>
-    <br><br>
-    <button onclick='say(m="finir",v="Amelie");'>say(m="finir",v="Amelie"); // French</button>
+    <button onclick='say("Finish","Victoria");'>English</button> 
+    <button onclick='say("完了吧，如沒意外","Sin-ji");' >Cantonese</button>
+    <button onclick='say("完結","Ting-Ting");'>Chinese</button>
+    <button onclick='say(m="終わり",v="Kyoko");'>Japanese</button>
+    <button onclick='say(m="종료",v="Yuna");'>Korean</button>
+    <button onclick='say(m="fin",v="Monica");'>Spanish</button>
+    <button onclick='say(m="finir",v="Amelie");'>French</button>
 </script>
 ```
 
