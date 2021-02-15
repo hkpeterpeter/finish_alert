@@ -1,22 +1,28 @@
+let voices = []; // store the voices
+let synth = window.speechSynthesis;
+
 function say(m = "Finish", v = "Victoria") {
-   let synth = window.speechSynthesis;
-   new Promise(
-    function (resolve, reject) {
+    const speak = () => {
+        let utterThis = new SpeechSynthesisUtterance(m);
+        for ( let voice of voices ) {
+            if ( voice.name === v ) {
+                utterThis.voice = voice;
+                break;
+            }
+        }
+        synth.speak(utterThis);
+    }
+    if ( voices.length === 0 ) {  // For the first time without a voice list
+        // Note: synth.getVoices() - use setInterval trick to get the voice list from the server
         let id = setInterval(() => {
-            if (synth.getVoices().length !== 0) {
-                resolve(synth.getVoices());
+            voices = synth.getVoices();
+            if (voices.length !== 0) {
                 clearInterval(id);
+                speak();
             }
         }, 10);
+    } 
+    else { // call the speak() handler if the voice list is ready
+        speak();
     }
-   ).then((voices) => {
-        let utterThis = new SpeechSynthesisUtterance(m);
-        for(i = 0; i < voices.length ; i++) {
-            if(voices[i].name === v) {
-                utterThis.voice = voices[i];
-                break;
-            }   
-        } 
-        synth.speak(utterThis);
-   });  
 }
