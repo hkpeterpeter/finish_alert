@@ -2,7 +2,7 @@
 
 Programs may run for a long time. It is useful to say something when the program is finished in macOS.
 
-[Say](https://ss64.com/osx/say.html) is a utility program to convert text to audible speech. 
+[Say](https://ss64.com/osx/say.html) is a utility program to convert text to audible speech. Linux alternative: `spd-say`
 
 Try to make better `Hello World` examples using different programming languages: 
 - [Python](#Python) 
@@ -130,19 +130,17 @@ void say(char *m, char *v) {
 
 Usage in C/C++:
 
-- Tool: [https://onlineutf8tools.com/convert-utf8-to-bytes](https://onlineutf8tools.com/convert-utf8-to-bytes)
-- Reference: [https://unicodebook.readthedocs.io/programming_languages.html](https://unicodebook.readthedocs.io/programming_languages.html)
+- u8 prefix: (UTF-8) encoding is needed for non-ASCII string
 
 ```c++
 int main() {
-    // UTF-8 needs to convert to bytes
-    say("Finish","Victoria");                              // English
-    say("\xe5\xae\x8c\xe7\xb5\x90", "Sin-ji");             // Cantonese
-    say("\xe5\xae\x8c\xe7\xb5\x90", "Ting-Ting");          // Chinese
-    say("\xe7\xb5\x82\xe3\x82\x8f\xe3\x82\x8a", "Kyoko");  // Japanese
-    say("\xec\xa2\x85\xeb\xa3\x8c","Yuna");                // Korean
-    say("fin","Monica");                                   // Spanish
-    say("finir","Amelie");                                 // French
+    say("Finish","Victoria");               // English
+    say(u8"完了吧，如無意外", "Sin-ji");       // Cantonese
+    say(u8"完結", "Ting-Ting");              // Chinese
+    say(u8"終わり", "Kyoko" );               // Japanese
+    say(u8"종료","Yuna");                    // Korean
+    say("fin","Monica");                    // Spanish
+    say("finir","Amelie");                  // French 
     return 0;
 }
 ```
